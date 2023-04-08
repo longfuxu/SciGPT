@@ -166,8 +166,6 @@ user_name='defualt', args=None):
                                      date_str + '-' + self.validateTitle(paper.title[:80]) + "." + self.file_format)
             self.export_to_markdown("\n".join(htmls), file_name=file_name, mode=mode)
 
-            # file_name = os.path.join(export_path, date_str+'-'+self.validateTitle(paper.title)+".md")
-            # self.export_to_markdown("\n".join(htmls), file_name=file_name, mode=mode)
             htmls = []
 
     @tenacity.retry(wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
@@ -201,6 +199,7 @@ user_name='defualt', args=None):
         ]
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
+            # model="gpt-4",
             # prompt需要用英语替换，少占用token。
             messages=messages,
         )
@@ -249,6 +248,7 @@ user_name='defualt', args=None):
         ]
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
+            # model="gpt-4",
             messages=messages,
         )
         result = ''
@@ -301,6 +301,7 @@ user_name='defualt', args=None):
 
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
+            # model="gpt-4",
             messages=messages,
         )
         result = ''
