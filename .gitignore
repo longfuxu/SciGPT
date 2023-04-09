@@ -34,4 +34,5 @@ yarn-error.log*
 next-env.d.ts
 
 # personal info
-apiley.ini
+*.ini
+/*.ini
