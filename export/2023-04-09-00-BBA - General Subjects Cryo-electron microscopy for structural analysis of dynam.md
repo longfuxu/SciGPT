@@ -4,45 +4,39 @@ BBA - General Subjects Cryo-electron microscopy for structural analysis of dynam
 
 
 1. Title: Cryo-electron microscopy for structural analysis of dynamic biological macromolecules
-
 2. Authors: Kazuyoshi Murata, Matthias Wolf
-
-3. Affiliation: 
-   Kazuyoshi Murata - National Institute for Physiological Sciences, Japan
-   Matthias Wolf - Molecular Cryo-Electron Microscopy Unit, Okinawa Institute of Science and Technology, Japan
-
+3. Affiliation: a National Institute for Physiological Sciences, 38 Myodaiji, Okazaki, Aichi 444-8585, Japan
 4. Key message:
-
-- (1): The research question of this article is to review the recent progress in cryo-electron microscopy (cryo-EM) for structural studies of dynamic biological macromolecules. The introduction emphasizes that the cryo-EM method has become one of the most powerful tools to solve the structure of biomolecules at near-atomic resolution, accompanied by X-ray crystallography and nuclear magnetic resonance (NMR) spectroscopy, and it can be used for structure determination of isolated biomolecular complexes across a wide molecular mass range while capturing multiple dynamic states.
- 
-- (2): The article discusses the basic procedures, the two modalities, and model building including recent advances in cryo-EM for structural studies of dynamic biological macromolecules. Sample preparation and image acquisition for cryo-EM are detailed in the article, including sample vitrification, low dose data acquisition, and model building.
- 
-- (3): The key experiment in this study is cryo-EM, which can determine the three-dimensional structure of biomacromolecules in near-native condition at close to atomic resolution, and has the potential to reveal conformations of dynamic molecular complexes. The data are analyzed by using advanced image-processing algorithms such as single particle analysis and electron tomography.
-  
-- (4): The results support the research question that cryo-EM is a powerful tool for the investigation of biological macromolecular structures including analysis of their dynamics. The key experiment discussed in this article provides evidence that cryo-EM can be used to determine the three-dimensional structure of biomacromolecules in near-native condition and has the potential to reveal conformations of dynamic molecular complexes.
+- (1): The research question of this article is to provide an overview of the cryo-electron microscopy method and introduce contemporary studies to investigate biomolecular structure and dynamics, including examples from the recent literature. The knowledge gap in this field is highlighted in the introduction as the need for techniques to study the dynamics of biological entities in their native environment, which is challenging but provides a richer insight into their behavior.
+- (2): The article discusses the sample preparation and image acquisition procedures for cryo-EM, highlighting the vitrification process used to preserve biological specimens at near-native conditions within a thin amorphous ice film. Two modalities for 3D data acquisition and reconstruction, single particle analysis (SPA), and subtomogram averaging (STA) are introduced.
+- (3): The key experiment is the use of cryo-EM to determine the three-dimensional structure of biomolecules in close to native conditions at close to atomic resolution. The data are analyzed using advanced image-processing algorithms, and the method has become even more widely applicable with present-day single particle analysis and electron tomography.
+- (4): The results of the study support the research questions by demonstrating the applicability and potential of cryo-EM for the investigation of biological macromolecular structures, including the analysis of their dynamics. The ability to observe structures in their near-native environment provides novel insights into dynamic molecular complexes.
 5. Methods: 
 
-- (1): Instrumentation: The article employs cryo-electron microscopy (cryo-EM) that uses electron microscopes capable of operating at cryogenic temperatures. This allows the imaging of biological macromolecules in vitrified ice to avoid radiation damage.
-
-- (2): Biological samples: The biological samples are purified biomolecular complexes, proteins, protein-RNA complexes, viruses, and membrane-bound macromolecules. The samples are prepared for cryo-EM by plunge-freezing or high-pressure freezing and then analyzed under cryogenic conditions.
-
-- (3): Experimental procedures: The article describes the basic procedures and recent advances in cryo-EM for structural studies of dynamic biological macromolecules. The sample preparation includes purification of the macromolecules, vitrification, and grid preparation. The experimental procedures for cryo-EM include low dose data acquisition, single particle analysis, electron tomography, and model building. Advanced image processing algorithms and model refinement techniques are used for data analysis.
-
-
+- (1): Cryo-electron microscopy (cryo-EM) instrumentation was used, including a transmission electron microscope equipped with a field-emission gun and a liquid-helium-cooled cryo-specimen holder. A direct electron detector with a high dynamic range was also utilized.
+ 
+- (2): Biological samples for cryo-EM were prepared using various techniques, including single-particle cryo-EM, cryo-electron tomography, and subtomogram averaging. Samples included purified proteins, protein complexes, and cellular organelles. Samples were prepared using vitrification to preserve biological specimens at near-native conditions within a thin amorphous ice film.
+ 
+- (3): Experimental procedures involved the acquisition of cryo-EM images, data processing, and 3D reconstruction. Cryo-EM images were collected at various magnifications and with varying electron doses. The collected data were processed using advanced image-processing algorithms, including the use of helical symmetry for filamentous structures. Two modalities for 3D data acquisition and reconstruction, single particle analysis (SPA), and subtomogram averaging (STA), were utilized to determine the structure of biological macromolecules.
 
 
 
-1. The significance and novelty of this research lie in its review of the recent progress in cryo-electron microscopy for structural studies of dynamic biological macromolecules. The introduction emphasizes its potential as a powerful tool complementary to X-ray crystallography and NMR spectroscopy for determining structures of isolated biomolecular complexes across a wide molecular mass range.
 
-2. The knowledge gap in this field is the need for structural determination of dynamic macromolecules in near-native conditions at close to atomic resolution. The research question is interesting due to the potential benefits of cryo-EM for effectively imaging and analyzing these biomolecules. As the preservation of the biological sample is critical for their function, cryo-EM can be used to study them in their native state, and thus has revolutionized the field of structural biology.
 
-3. The proposed methods can work to solve this problem through the use of electron microscopes that can operate at cryogenic temperatures, allowing imaging of biological macromolecules in vitrified ice to avoid radiation damage. Recent advances in cryo-EM and image processing algorithms also allow for the analysis of multiple dynamic states.
+1. Significance and novelty of the research: This article provides an overview of the cryo-electron microscopy (cryo-EM) method and introduces contemporary studies that investigate biomolecular structure and dynamics through this technique. The novelty of this research is in highlighting the applicability and potential of cryo-EM for the investigation of biological macromolecular structures, including analysis of their dynamics, by observing structures in their near-native environment, which provides novel insights into dynamic molecular complexes.
 
-4. The key experiments in this study include cryo-EM, which determines the three-dimensional structure of biomacromolecules in near-native conditions and reveals conformations of dynamic molecular complexes. Data are analyzed by using advanced image-processing algorithms such as single particle analysis and electron tomography.
+2. Knowledge gap and research question: The knowledge gap in this field is the need for techniques to study the dynamics of biological entities in their native environment, which is challenging but provides a richer insight into their behavior. The research question of this article is to provide an overview of the cryo-EM method and to introduce contemporary studies that investigate biomolecular structure and dynamics, addressing this knowledge gap.
 
-5. Strengths: This article comprehensively reviews the recent progress in cryo-EM for structural studies of dynamic bio-macromolecules. Weaknesses: It doesn't include a detailed comparison of cryo-EM with other methods of biomolecular structural determination. It also does not discuss the limitations and challenges of cryo-EM.
+3. Methodological feasibility: The proposed methods can work to solve the above problem as they offer high-resolution, near-native structure determination of biological macromolecules. The cryo-EM technique allows direct visualization of biological structures in their native states and requires minimal sample manipulation, preserving structural integrity.
 
-6. (1) The use of cryo-EM to determine the overall structure and conformational states of protein complexes embedded in cellular membranes, which are difficult to analyze by other structural biology methods. (2) The development of new tools and strategies for visualization of proteins in their natural environment using integrated cryo-electron microscopy and environmental scanning electron microscopy. (3) Improvement of the resolution limit of cryo-EM to achieve higher accuracy of structure determination for large and dynamic protein complexes.
+4. Key experiments: The key experiment is the use of cryo-EM to determine the three-dimensional structure of biological macromolecules, including purified proteins, protein complexes, and cellular organelles in close to native conditions at close to atomic resolution. Data analysis is performed using advanced image-processing algorithms, including the use of helical symmetry for filamentous structures, and two modalities for 3D data acquisition and reconstruction: single particle analysis (SPA) and subtomogram averaging (STA).
+
+5. Strengths and weaknesses: The strengths of this article lie in its comprehensive overview of the cryo-EM method and its applications in addressing the knowledge gap in investigating the dynamics of biological entities. The article effectively highlights the potential of cryo-EM in providing high-resolution structural determination of biomolecules in native conditions. The weakness of this article is that it is primarily descriptive and lacks experimental validation of the potential of the cryo-EM method in addressing knowledge gaps.
+
+6. Potential following research topics:
+- Investigating the dynamics of larger biological entities (such as viruses) using cryo-electron tomography and subtomogram averaging.
+- Comparing the resolution and quality of cryo-EM versus X-ray crystallography techniques for structural determination of biological macromolecules.
+- Developing optimized image-processing algorithms to enhance the quality and resolution of cryo-EM images and data.
 
 
 

@@ -1,17 +1,15 @@
 # SciGPT
 
-This repo is modified based on repo[]. 
-
 ## How to use:
 ### 一、Run with python scripts
 
-Windows, MAC and Ubuntu systems should be fine;
+Windows, MacOS and Ubuntu systems should be fine;
 
-python version is best 3.9, other versions should not have any problems
+python version is best 3.9, other versixons should not have any problems
 
-1. Fill in your openai key in apikey.ini. Note that this code is a pure local project, your key is very safe!
+1. Copy `apikey_example.ini` and rename it as `apikey.ini`; fill in your openai key in apikey.ini. Note that this code is a pure local project, your key is very safe!
 
-2. The process must ensure global proxy! (Non-Chinese users may not have this problem)
+2. The process must ensure global proxy! 
 
 3. Install dependencies:
 ``` bash
@@ -22,3 +20,6 @@ pip install -r requirements.txt
 ```python
 python chat_paper.py --pdf_path "pdf_path.pdf"
 ```
+
+## Credit
+This repo is modified based on repo[https://github.com/kaixindelele/ChatPaper]. 

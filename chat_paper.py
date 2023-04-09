@@ -2,6 +2,8 @@ import argparse
 import configparser
 import datetime
 import os
+import base64
+import requests
 import re
 from collections import namedtuple
 import numpy as np
@@ -15,6 +17,7 @@ PaperParams = namedtuple(
     "PaperParams",
     [
         "pdf_path",
+        "save_image",
         "file_format",
         "language",
     ],
@@ -48,6 +51,10 @@ user_name='defualt', args=None):
         self.chat_api_list = [api.strip() for api in self.chat_api_list if len(api) > 20]
         self.cur_api = 0
         self.file_format = args.file_format
+        if args.save_image:
+            self.gitee_key = self.config.get('Gitee', 'api')
+        else:
+            self.gitee_key = ''
         self.max_token_num = 4096
         self.encoding = tiktoken.get_encoding("gpt2")
 
@@ -64,6 +71,40 @@ user_name='defualt', args=None):
     @tenacity.retry(wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
                     stop=tenacity.stop_after_attempt(5),
                     reraise=True)
+    
+    def upload_gitee(self, image_path, image_name='', ext='png'):
+        """
+        upload to gitee
+        :return:
+        """
+        with open(image_path, 'rb') as f:
+            base64_data = base64.b64encode(f.read())
+            base64_content = base64_data.decode()
+
+        date_str = str(datetime.datetime.now())[:19].replace(':', '-').replace(' ', '-') + '.' + ext
+        path = image_name + '-' + date_str
+
+        payload = {
+            "access_token": self.gitee_key,
+            "owner": self.config.get('Gitee', 'owner'),
+            "repo": self.config.get('Gitee', 'repo'),
+            "path": self.config.get('Gitee', 'path'),
+            "content": base64_content,
+            "message": "upload image"
+        }
+        # 这里需要修改成你的gitee的账户和仓库名，以及文件夹的名字：
+        url = f'https://gitee.com/api/v5/repos/' + self.config.get('Gitee', 'owner') + '/' + self.config.get('Gitee',
+                                                                                                             'repo') + '/contents/' + self.config.get(
+            'Gitee', 'path') + '/' + path
+        rep = requests.post(url, json=payload).json()
+        print("rep:", rep)
+        if 'content' in rep.keys():
+            image_url = rep['content']['download_url']
+        else:
+            image_url = r"https://gitee.com/api/v5/repos/" + self.config.get('Gitee', 'owner') + '/' + self.config.get(
+                'Gitee', 'repo') + '/contents/' + self.config.get('Gitee', 'path') + '/' + path
+
+        return image_url
 
     def summary_with_chat(self, paper_list):
         htmls = []
@@ -355,6 +396,8 @@ def chat_paper_main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--pdf_path", type=str, default='', help="if none, the bot will download from arxiv with query")
+    parser.add_argument("--save_image", default=True,
+                        help="save image? It takes a minute or two to save a picture! But pretty")
     parser.add_argument("--file_format", type=str, default='md', help="导出的文件格式，如果存图片的话，最好是md，如果不是的话，txt的不会乱")
     parser.add_argument("--language", type=str, default='en', help="The other output lauguage is English, is en")
 
