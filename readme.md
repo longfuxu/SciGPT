@@ -52,17 +52,31 @@ csv_file = "/path/to/exported/csv/file.csv"
 # Create the destination folder if it doesn't exist
 os.makedirs(destination_folder, exist_ok=True)
 
+uncopied_files = []
+
 # Read the CSV file and copy the PDF files
 with open(csv_file, newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        pdf_path = row['File Attachments']
-        if pdf_path:
-            pdf_filename = pdf_path.split('/')[-1]
-            pdf_destination_path = os.path.join(destination_folder, pdf_filename)
-            shutil.copy2(pdf_path, pdf_destination_path)
+        pdf_paths = row['File Attachments'].strip(';').split(';')
+        for pdf_path in pdf_paths:
+            pdf_path = pdf_path.strip()
+            if pdf_path.lower().endswith('.pdf'):
+                pdf_filename = pdf_path.split('/')[-1]
+                pdf_destination_path = os.path.join(destination_folder, pdf_filename)
+                try:
+                    shutil.copy2(pdf_path, pdf_destination_path)
+                except FileNotFoundError as e:
+                    print(f"Error: {e}")
+                    uncopied_files.append(pdf_filename)
 
 print("PDF files copied successfully!")
+
+if uncopied_files:
+    print("\nThe following files could not be copied:")
+    for file in uncopied_files:
+        print(file)
+
 
 ```
 4. Configure the script: Replace `/path/to/destination/folder` with the path to the folder where you want to copy the selected PDF files. Replace `/path/to/exported/csv/file.csv` with the path to the CSV file you exported in step 2.
