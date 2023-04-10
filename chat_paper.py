@@ -132,6 +132,7 @@ user_name='defualt', args=None):
             htmls.append(str(paper.title))
             htmls.append('\n\n\n')
             htmls.append(chat_summary_text)
+            
 
             # 第二步总结方法：
             # TODO，由于有些文章的方法章节名是算法名，所以简单的通过关键词来筛选，很难获取，后面需要用其他的方案去优化。
@@ -208,6 +209,8 @@ user_name='defualt', args=None):
             self.export_to_markdown("\n".join(htmls), file_name=file_name, mode=mode)
 
             htmls = []
+            # To return the summary, conclusion, and methods sections
+            return chat_summary_text, chat_conclusion_text, chat_method_text
 
     @tenacity.retry(wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
                     stop=tenacity.stop_after_attempt(5),

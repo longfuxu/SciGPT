@@ -19,6 +19,11 @@ pip install -r requirements.txt
 ```python
 python chat_paper.py --pdf_path "pdf_path.pdf"
 ```
+
+5. If you prefer a web-app, you can also run `python app.py`, then you can open your web browser with the address: http://127.0.0.1:5000/. By uploading a pdf file, you can upload and analyze on a web based interface.
+ - Make sure you have Flask app installed, otherwise open your terminal and run ` pip install Flask`
+ - After uploading a pdf file and hit the upload button, wait roughly one minite, you will see the magic.
+ - currently download button doesn't work. I will fix it soon.
 ## Use cases: Batch Download PDFs from Plaintext References and Analyze with ChatPaper
 This manual will guide you through the process of converting a list of plaintext references into a .bib file, batch downloading the corresponding PDFs using Zotero, copying the PDFs to a separate folder, analyzing the documents using ChatPaper, and compiling a PDF file with key messages.
 ### Step 1: Convert Citations to a .bib File and Batch Download PDFs with Zotero

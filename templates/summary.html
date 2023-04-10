@@ -1,0 +1,22 @@
+summary.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+</head>
+<body>
+    <h1>Summary</h1>
+    <div id="summary"></div>
+    <a href="{{ summary_file_path }}" download="{{ filename }}">Download Summary</a>
+
+    <script>
+        const markdown = `{{ summary | safe }}`;
+        const converter = new showdown.Converter();
+        const html = converter.makeHtml(markdown);
+        document.getElementById('summary').innerHTML = html;
+    </script>
+</body>
+</html>

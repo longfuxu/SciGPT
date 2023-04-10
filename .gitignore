@@ -36,3 +36,5 @@ next-env.d.ts
 # personal info
 *.ini
 /*.ini
+/uploads/*
+/export/*
